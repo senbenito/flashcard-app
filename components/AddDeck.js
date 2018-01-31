@@ -5,7 +5,7 @@ export default class AddDeck extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello world</Text>/>
+        <Text>Hello world</Text>
       </View>
     );
   }
@@ -14,7 +14,6 @@ export default class AddDeck extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },

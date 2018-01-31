@@ -11,14 +11,15 @@ const Tabs = TabNavigator({
     screen: DeckList,
     navigationOptions: {
       tabBarLabel: 'Decks',
-      tabBarIcon: ({tintColor})=> <MaterialCommunityIcons name='cards' size={30} color={tintColor}/>
+      tabBarIcon: ({tintColor}) => <MaterialCommunityIcons name='cards' size={30} color={tintColor} />
     }
   },
   AddDeck: {
     screen: AddDeck,
     navigationOptions: {
       tabBarLabel: 'Add a Deck',
-      tabBarIcon: ({tintColor})=><FontAwesome name='plus-square' size={30} color={tintColor}/>
+      tabBarIcon: ({tintColor}) => <FontAwesome name='plus-square' size={30} color={tintColor} />
+
     }
   }
 }, {
@@ -35,7 +36,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{flex:1}}>
-        <Tabs/>
+        <Tabs />
       </View>
     );
   }
