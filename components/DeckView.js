@@ -1,21 +1,17 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
+import {getData} from '../utils/api';
+import {styles} from '../utils/styles';
 
 export default class DeckView extends React.Component {
   render (){
     const deck = this.props.navigation.state.params.entryId;
+    const decks = getData();
     return (
       <View style={styles.container}>
-        <Text>This is the {deck} deck.</Text>
+        <Text>Welcome to {decks[deck].title}!</Text>
+        <Text>We have {decks[deck].questions.length} questions in this deck...</Text>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

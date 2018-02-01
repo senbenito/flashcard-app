@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import DeckList from './components/DeckList';
-import AddDeck from './components/AddDeck';
-import DeckView from './components/DeckView';
 import {TabNavigator, StackNavigator} from 'react-navigation';
 import {FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
 import {white, orange, redOrange} from './utils/colors';
+import DeckList from './components/DeckList';
+import AddDeck from './components/AddDeck';
+import DeckView from './components/DeckView';
 
 const Tabs = TabNavigator({
   DeckList: {

@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
+import {styles} from '../utils/styles';
 
 export default class AddDeck extends React.Component {
   render() {
@@ -10,11 +11,3 @@ export default class AddDeck extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
