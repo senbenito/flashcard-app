@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
-export default class AddDeck extends React.Component {
-  render() {
+export default class DeckView extends React.Component {
+  render (){
+    const deck = this.props.navigation.state.params.entryId;
     return (
       <View style={styles.container}>
-        <Text>Hello AddDeck!</Text>
+        <Text>This is the {deck} deck.</Text>
       </View>
     );
   }
