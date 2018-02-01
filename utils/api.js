@@ -1,3 +1,10 @@
+export async function getHerokuDecks() {
+  const response = await fetch('http://localhost:6969/decks');
+  // const response = await fetch('https://senbenito-server.herokuapp.com/decks');
+  let data = await response.json();
+  return data;
+}
+
 const initialData = {
   Addition: {
     title: 'Addition',
@@ -30,16 +37,3 @@ const initialData = {
 export const getData = () => {
   return initialData;
 };
-
-export function saveDeckTitle(title){
-  return fetch('https://senbenito-server.herokuapp.com/decks', {
-    method: 'POST',
-    credentials: 'include',
-    body: JSON.stringify({
-      [title]: {
-        title: title,
-        questions: []
-      }
-    })
-  });
-}
